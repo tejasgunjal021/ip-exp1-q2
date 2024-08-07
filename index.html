@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+</head>
+<body>
+    <h1 align="center">Order Your Customized T-shirt</h1>
+
+    <form action="/submit-details" method="post">
+        
+        <!-- T-shirt Details Section -->
+        <fieldset>
+            <legend><b>T-shirt Details</b></legend>
+            
+            <label for="tagline">Tagline on the Shirt:</label><br>
+            <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+                <option value="" disabled selected>Select a color</option>
+                <option value="Blue">Blue</option>
+                <option value="Maroon">Maroon</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Black">Black</option>
+                <option value="Cyan">Cyan</option>
+                <option value="White">White</option>
+                <option value="Purple">Purple</option>
+            </select><br><br>
+
+            <label for="size">Size:</label><br>
+            <input type="radio" id="small" name="size" value="small" required>
+            <label for="small">Small</label>
+            <input type="radio" id="medium" name="size" value="medium">
+            <label for="medium">Medium</label>
+            <input type="radio" id="large" name="size" value="large">
+            <label for="large">Large</label>
+            <input type="radio" id="xl" name="size" value="xl">
+            <label for="xl">XL</label>
+            <input type="radio" id="xxl" name="size" value="xxl">
+            <label for="xxl">XXL</label><br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="deliveryDate">Delivery Date:</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" required><br><br>
+        </fieldset>
+        <br>
+
+        <!-- Delivery Details Section -->
+        <fieldset>
+            <legend><b>Delivery Details</b></legend>
+
+            <label for="name">Recipient's Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter recipient's name" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required><br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" placeholder="Enter address" required></textarea> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" rows="100" cols="100" placeholder="Enter phone number" pattern="[0-9]{10}" required><br><br>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend><b>Additional Comments</b></legend>
+
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any additional comments"></textarea><br><br>
+        </fieldset>
+        <br>
+
+        <input type="submit" value="Place Order">
+        <input type="reset" value="Reset Form">
+    </form>
+</body>
+</html>
