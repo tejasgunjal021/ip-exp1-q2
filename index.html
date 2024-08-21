@@ -6,11 +6,10 @@
     <title>Order</title>
 </head>
 <body>
-    <h1 align="center">Order Your Customized T-shirt</h1>
+    <h1 align="center">Order Customized T-shirt</h1>
 
     <form action="/submit-details" method="post">
         
-        <!-- T-shirt Details Section -->
         <fieldset>
             <legend><b>T-shirt Details</b></legend>
             
@@ -42,8 +41,9 @@
             <input type="radio" id="xxl" name="size" value="xxl">
             <label for="xxl">XXL</label><br><br>
 
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+            <label for="quantity">Quantity:</label><br>
+            <input type="range" id="quantity" name="quantity" min="1" max="100" step="1" value="1">
+            <span class="slider-label">1</span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             <label for="deliveryDate">Delivery Date:</label>
@@ -51,7 +51,6 @@
         </fieldset>
         <br>
 
-        <!-- Delivery Details Section -->
         <fieldset>
             <legend><b>Delivery Details</b></legend>
 
